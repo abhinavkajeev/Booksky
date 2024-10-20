@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Booksky</title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="booksky.css" />
+    <!-- Header Section -->
+    <header>
+      <h1>Booksky</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <div class="main-content" id="notesContainer">
+      <!-- Existing Book Card -->
+      <div class="book-card show">
+        <h2>Rich Dad Poor Dad</h2>
+        <h3>Robert</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur
+          recusandae perferendis cumque doloribus.
+        </p>
+        <button class="delete-btn" onclick="this.parentElement.remove()">
+          Delete
+        </button>
+      </div>
+    </div>
+
+    <!-- Add Button at Bottom Right -->
+    <button class="add-btn" onclick="showModal()">+</button>
+
+    <!-- Modal for Adding a Book -->
+    <div class="modal" id="addBookModal">
+      <div class="modal-content">
+        <h2>Add Book</h2>
+        <input type="text" id="bookTitle" placeholder="Book Title" />
+        <input type="text" id="bookAuthor" placeholder="Book Author" />
+        <textarea
+          id="bookDescription"
+          placeholder="Short Description"
+        ></textarea>
+        <button class="add-book-btn" onclick="addBook()">ADD</button>
+        <button class="cancel-btn" onclick="hideModal()">CANCEL</button>
+      </div>
+    </div>
+
+   <script src="booksky.js"></script>
+  </body>
+</html>
